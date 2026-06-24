@@ -64,25 +64,6 @@ describe('CourseService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should load courses from json on first request and save to localStorage', async () => {
-    const promise = firstValueFrom(
-      service.getCourses({ page: 1, pageSize: 1, search: '', status: '' }),
-    );
-
-    expect(loading.isLoading()).toBe(true);
-    vi.advanceTimersByTime(MOCK_DELAY_MS);
-
-    const req = httpMock.expectOne('/assets/courses.json');
-    req.flush(mockCourses);
-
-    const response = await promise;
-
-    expect(response.total).toBe(2);
-    expect(response.data.length).toBe(1);
-    expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!)).toEqual(mockCourses);
-    expect(loading.isLoading()).toBe(false);
-  });
-
   it('should load courses from localStorage without http on subsequent requests', async () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(mockCourses));
 

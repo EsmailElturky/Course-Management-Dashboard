@@ -20,7 +20,6 @@ import {
   CreateCourseRequest,
 } from '../interfaces';
 
-const COURSES_ASSET_URL = '/assets/courses.json';
 
 @Injectable({ providedIn: 'root' })
 export class CourseService {
@@ -103,7 +102,7 @@ export class CourseService {
       return of(undefined);
     }
 
-    return this.http.get<Course[]>(COURSES_ASSET_URL).pipe(
+    return this.http.get<Course[]>('assets/courses.json').pipe(
       tap((courses) => {
         this.setCourses(courses);
         this.saveToStorage();
