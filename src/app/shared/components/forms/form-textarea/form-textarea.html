@@ -1,0 +1,22 @@
+<div class="mb-3">
+  @if (label()) {
+    <label class="form-label">{{ label() }}</label>
+  }
+  <textarea
+    class="form-control"
+    [class.is-invalid]="hasError()"
+    [placeholder]="placeholder()"
+    [rows]="rows()"
+    [attr.maxlength]="maxLength()"
+    [value]="value() ?? ''"
+    [disabled]="disabled()"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+  ></textarea>
+  @if (maxLength()) {
+    <div class="form-text text-end">{{ (value() ?? '').length }} / {{ maxLength() }}</div>
+  }
+  @if (hasError() || (control?.errors && control?.touched)) {
+    <app-control-error-handler [error]="control?.errors" [label]="label()" />
+  }
+</div>

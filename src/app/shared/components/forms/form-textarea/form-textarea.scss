@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-control.is-invalid {
+  border-color: var(--bs-danger);
+}
+
+.form-text {
+  font-size: 0.8125rem;
+}

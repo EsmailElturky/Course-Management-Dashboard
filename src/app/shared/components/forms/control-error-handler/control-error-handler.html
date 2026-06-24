@@ -1,0 +1,23 @@
+@if (error()?.[ControlError.Required]) {
+  <div class="invalid-feedback d-block">
+    {{ label() ? label() + ' is required.' : 'This field is required.' }}
+  </div>
+} @else if (error()?.[ControlError.Minlength]) {
+  <div class="invalid-feedback d-block">
+    Minimum length is {{ error()?.['minlength']?.requiredLength }} characters.
+  </div>
+} @else if (error()?.[ControlError.Maxlength]) {
+  <div class="invalid-feedback d-block">
+    Maximum length is {{ error()?.['maxlength']?.requiredLength }} characters.
+  </div>
+} @else if (error()?.[ControlError.Min]) {
+  <div class="invalid-feedback d-block">
+    Value must be greater than {{ error()?.['min']?.min }}.
+  </div>
+} @else if (error()?.[ControlError.Max]) {
+  <div class="invalid-feedback d-block">
+    Value must be at most {{ error()?.['max']?.max }}.
+  </div>
+} @else if (error()?.[ControlError.Pattern]) {
+  <div class="invalid-feedback d-block">Invalid format.</div>
+}

@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-select.is-invalid {
+  border-color: var(--bs-danger);
+}

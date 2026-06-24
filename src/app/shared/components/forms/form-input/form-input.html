@@ -1,0 +1,18 @@
+<div class="mb-3">
+  @if (label()) {
+    <label class="form-label">{{ label() }}</label>
+  }
+  <input
+    class="form-control"
+    [class.is-invalid]="hasError()"
+    [type]="type()"
+    [placeholder]="placeholder()"
+    [value]="value() ?? ''"
+    [disabled]="disabled()"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+  />
+  @if (hasError() || (control?.errors && control?.touched)) {
+    <app-control-error-handler [error]="control?.errors" [label]="label()" />
+  }
+</div>

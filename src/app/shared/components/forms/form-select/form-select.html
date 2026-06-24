@@ -1,0 +1,22 @@
+<div class="mb-3">
+  @if (label()) {
+    <label class="form-label">{{ label() }}</label>
+  }
+  <select
+    class="form-select"
+    [class.is-invalid]="hasError()"
+    [disabled]="disabled()"
+    (change)="onSelect($event)"
+    (blur)="onBlur()"
+  >
+    <option value="" disabled [selected]="value() === '' || value() === null">
+      {{ placeholder() }}
+    </option>
+    @for (option of options(); track option.value) {
+      <option [value]="option.value" [selected]="isSelected(option)">{{ option.label }}</option>
+    }
+  </select>
+  @if (hasError() || (control?.errors && control?.touched)) {
+    <app-control-error-handler [error]="control?.errors" [label]="label()" />
+  }
+</div>
