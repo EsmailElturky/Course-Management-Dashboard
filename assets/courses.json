@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "courseName": "Angular Fundamentals",
+    "instructorName": "Ahmed Ali",
+    "category": "Frontend",
+    "duration": 20,
+    "price": 1500,
+    "status": "Active",
+    "createdDate": "2026-06-01",
+    "description": "Learn the core concepts of Angular including components, services, and routing."
+  },
+  {
+    "id": 2,
+    "courseName": "Advanced TypeScript",
+    "instructorName": "Sara Hassan",
+    "category": "Frontend",
+    "duration": 15,
+    "price": 1200,
+    "status": "Active",
+    "createdDate": "2026-05-28",
+    "description": "Master generics, utility types, and advanced patterns in TypeScript."
+  },
+  {
+    "id": 3,
+    "courseName": "Node.js API Development",
+    "instructorName": "Omar Farouk",
+    "category": "Backend",
+    "duration": 25,
+    "price": 1800,
+    "status": "Active",
+    "createdDate": "2026-05-25",
+    "description": "Build RESTful APIs with Express, authentication, and database integration."
+  },
+  {
+    "id": 4,
+    "courseName": "UI/UX Design Principles",
+    "instructorName": "Layla Mahmoud",
+    "category": "Design",
+    "duration": 18,
+    "price": 1400,
+    "status": "Draft",
+    "createdDate": "2026-05-20",
+    "description": "Explore user-centered design, wireframing, and prototyping best practices."
+  },
+  {
+    "id": 5,
+    "courseName": "Docker & Kubernetes",
+    "instructorName": "Karim Nabil",
+    "category": "DevOps",
+    "duration": 22,
+    "price": 2000,
+    "status": "Active",
+    "createdDate": "2026-05-18",
+    "description": "Containerize applications and orchestrate deployments with Kubernetes."
+  },
+  {
+    "id": 6,
+    "courseName": "React Native Essentials",
+    "instructorName": "Nour El-Din",
+    "category": "Mobile",
+    "duration": 24,
+    "price": 1700,
+    "status": "Active",
+    "createdDate": "2026-05-15",
+    "description": "Create cross-platform mobile apps using React Native and Expo."
+  },
+  {
+    "id": 7,
+    "courseName": "Python for Data Analysis",
+    "instructorName": "Hana Ibrahim",
+    "category": "Data",
+    "duration": 30,
+    "price": 1600,
+    "status": "Active",
+    "createdDate": "2026-05-12",
+    "description": "Analyze datasets with Pandas, NumPy, and visualization libraries."
+  },
+  {
+    "id": 8,
+    "courseName": "Spring Boot Microservices",
+    "instructorName": "Youssef Kamal",
+    "category": "Backend",
+    "duration": 28,
+    "price": 2100,
+    "status": "Draft",
+    "createdDate": "2026-05-10",
+    "description": "Design scalable microservices with Spring Boot and service discovery."
+  },
+  {
+    "id": 9,
+    "courseName": "CSS Grid & Flexbox Mastery",
+    "instructorName": "Mariam Saleh",
+    "category": "Frontend",
+    "duration": 12,
+    "price": 900,
+    "status": "Active",
+    "createdDate": "2026-05-08",
+    "description": "Build responsive layouts using modern CSS layout techniques."
+  },
+  {
+    "id": 10,
+    "courseName": "Figma for Product Teams",
+    "instructorName": "Rania Ashraf",
+    "category": "Design",
+    "duration": 14,
+    "price": 1100,
+    "status": "Archived",
+    "createdDate": "2026-05-05",
+    "description": "Collaborate on design systems and handoff workflows in Figma."
+  },
+  {
+    "id": 11,
+    "courseName": "AWS Cloud Practitioner",
+    "instructorName": "Tarek Mostafa",
+    "category": "DevOps",
+    "duration": 26,
+    "price": 2200,
+    "status": "Active",
+    "createdDate": "2026-05-03",
+    "description": "Understand core AWS services, security, and cloud architecture basics."
+  },
+  {
+    "id": 12,
+    "courseName": "Flutter Development",
+    "instructorName": "Dina Waleed",
+    "category": "Mobile",
+    "duration": 27,
+    "price": 1750,
+    "status": "Active",
+    "createdDate": "2026-05-01",
+    "description": "Build beautiful mobile apps with Flutter widgets and state management."
+  },
+  {
+    "id": 13,
+    "courseName": "Machine Learning Basics",
+    "instructorName": "Amir Fathy",
+    "category": "Data",
+    "duration": 32,
+    "price": 2400,
+    "status": "Draft",
+    "createdDate": "2026-04-28",
+    "description": "Introduction to supervised learning, model evaluation, and scikit-learn."
+  },
+  {
+    "id": 14,
+    "courseName": "GraphQL with Apollo",
+    "instructorName": "Salma Reda",
+    "category": "Backend",
+    "duration": 16,
+    "price": 1300,
+    "status": "Active",
+    "createdDate": "2026-04-25",
+    "description": "Design GraphQL schemas and integrate Apollo Server with clients."
+  },
+  {
+    "id": 15,
+    "courseName": "Vue.js Complete Guide",
+    "instructorName": "Hassan Adel",
+    "category": "Frontend",
+    "duration": 21,
+    "price": 1550,
+    "status": "Archived",
+    "createdDate": "2026-04-22",
+    "description": "Learn Vue 3 composition API, Pinia, and Vue Router in depth."
+  },
+  {
+    "id": 16,
+    "courseName": "Design Systems in Practice",
+    "instructorName": "Nada Sherif",
+    "category": "Design",
+    "duration": 19,
+    "price": 1450,
+    "status": "Active",
+    "createdDate": "2026-04-20",
+    "description": "Create reusable component libraries and documentation for design systems."
+  },
+  {
+    "id": 17,
+    "courseName": "CI/CD with GitHub Actions",
+    "instructorName": "Ibrahim Lotfy",
+    "category": "DevOps",
+    "duration": 17,
+    "price": 1500,
+    "status": "Active",
+    "createdDate": "2026-04-18",
+    "description": "Automate testing and deployment pipelines using GitHub Actions."
+  },
+  {
+    "id": 18,
+    "courseName": "Swift iOS Development",
+    "instructorName": "Mona Khaled",
+    "category": "Mobile",
+    "duration": 29,
+    "price": 1900,
+    "status": "Draft",
+    "createdDate": "2026-04-15",
+    "description": "Build native iOS applications with SwiftUI and Xcode."
+  },
+  {
+    "id": 19,
+    "courseName": "SQL for Analytics",
+    "instructorName": "Ehab Mansour",
+    "category": "Data",
+    "duration": 20,
+    "price": 1250,
+    "status": "Active",
+    "createdDate": "2026-04-12",
+    "description": "Write complex queries, window functions, and reports for business analytics."
+  },
+  {
+    "id": 20,
+    "courseName": "Secure Web Applications",
+    "instructorName": "Zeinab Hany",
+    "category": "Backend",
+    "duration": 23,
+    "price": 1850,
+    "status": "Active",
+    "createdDate": "2026-04-10",
+    "description": "Prevent common vulnerabilities including XSS, CSRF, and SQL injection."
+  }
+]
