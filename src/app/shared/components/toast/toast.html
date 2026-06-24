@@ -1,0 +1,18 @@
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 11000">
+  @for (toast of toastService.toasts(); track toast.id) {
+    <div class="toast show mb-2" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header {{ severityClass(toast.severity) }}">
+        <strong class="me-auto">{{ toast.summary }}</strong>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          aria-label="Close"
+          (click)="dismiss(toast)"
+        ></button>
+      </div>
+      @if (toast.detail) {
+        <div class="toast-body">{{ toast.detail }}</div>
+      }
+    </div>
+  }
+</div>
