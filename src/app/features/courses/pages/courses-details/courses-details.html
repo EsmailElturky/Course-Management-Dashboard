@@ -1,1 +1,75 @@
-<p>courses-details works!</p>
+<div class="container py-4">
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <div>
+      <h1 class="h3 mb-1">Course Details</h1>
+      <p class="text-muted mb-0">View full information about the selected course.</p>
+    </div>
+    <a routerLink="/courses-list" class="btn btn-outline-secondary">Back to List</a>
+  </div>
+
+  @if (error()) {
+    <div class="alert alert-danger d-flex flex-wrap justify-content-between align-items-center gap-2" role="alert">
+      <span>{{ error() }}</span>
+      <a routerLink="/courses-list" class="btn btn-sm btn-outline-danger">Back to List</a>
+    </div>
+  }
+
+  @if (isLoading()) {
+    <app-loading-skeleton [count]="1" />
+  } @else if (course(); as courseDetails) {
+    <div class="card shadow-sm course-details-card">
+      <div class="card-body">
+        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+          <div>
+            <h2 class="h4 mb-2">{{ courseDetails.courseName }}</h2>
+            <span class="badge {{ statusClass() }}">{{ courseDetails.status }}</span>
+          </div>
+          <a [routerLink]="['/add-edit-course', courseDetails.id]" class="btn btn-sm btn-outline-primary">
+            Edit Course
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <dl class="detail-list mb-0">
+              <dt>Instructor</dt>
+              <dd>{{ courseDetails.instructorName }}</dd>
+
+              <dt>Category</dt>
+              <dd>{{ courseDetails.category }}</dd>
+
+              <dt>Duration</dt>
+              <dd>{{ courseDetails.duration }} hours</dd>
+            </dl>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <dl class="detail-list mb-0">
+              <dt>Price</dt>
+              <dd>{{ courseDetails.price | currency:'USD':'symbol':'1.0-0' }}</dd>
+
+              <dt>Created Date</dt>
+              <dd>{{ courseDetails.createdDate | date:'mediumDate' }}</dd>
+
+              <dt>Course ID</dt>
+              <dd>#{{ courseDetails.id }}</dd>
+            </dl>
+          </div>
+
+          <div class="col-12">
+            <dl class="detail-list mb-0">
+              <dt>Description</dt>
+              <dd>
+                @if (courseDetails.description) {
+                  {{ courseDetails.description }}
+                } @else {
+                  <span class="text-muted">No description provided.</span>
+                }
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

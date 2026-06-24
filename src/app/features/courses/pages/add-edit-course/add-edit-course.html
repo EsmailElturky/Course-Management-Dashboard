@@ -1,1 +1,91 @@
-<p>add-edit-course works!</p>
+<div class="container py-4">
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <div>
+      <h1 class="h3 mb-1">{{ isEditMode() ? 'Edit Course' : 'Add Course' }}</h1>
+      <p class="text-muted mb-0">
+        {{ isEditMode() ? 'Update course information.' : 'Create a new course for the platform.' }}
+      </p>
+    </div>
+    <a routerLink="/courses-list" class="btn btn-outline-secondary">Back to List</a>
+  </div>
+
+  @if (error()) {
+    <div class="alert alert-danger" role="alert">{{ error() }}</div>
+  }
+
+  @if (!isLoading() && !error()) {
+    <form class="card shadow-sm" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <app-form-input
+              formControlName="courseName"
+              label="Course Name"
+              placeholder="Enter course name"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <app-form-input
+              formControlName="instructorName"
+              label="Instructor Name"
+              placeholder="Enter instructor name"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <app-form-select
+              formControlName="category"
+              label="Category"
+              placeholder="Select category"
+              [options]="categoryOptions"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <app-form-select
+              formControlName="status"
+              label="Status"
+              placeholder="Select status"
+              [options]="statusOptions"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <app-form-input
+              formControlName="duration"
+              label="Duration (hours)"
+              type="number"
+              placeholder="Enter duration"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <app-form-input
+              formControlName="price"
+              label="Price"
+              type="number"
+              placeholder="Enter price"
+            />
+          </div>
+
+          <div class="col-12">
+            <app-form-textarea
+              formControlName="description"
+              label="Description"
+              placeholder="Optional course description"
+              [maxLength]="500"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer d-flex flex-wrap gap-2 justify-content-end bg-white">
+        <a routerLink="/courses-list" class="btn btn-outline-secondary">Cancel</a>
+        <button type="submit" class="btn btn-primary" [disabled]="isSubmitting()">
+          {{ isEditMode() ? 'Update Course' : 'Create Course' }}
+        </button>
+      </div>
+    </form>
+  }
+</div>
